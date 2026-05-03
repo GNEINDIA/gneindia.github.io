@@ -3,65 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Good Nature Enterprises</title>
+  <title>Good Nature Enterprises | STP, ETP & Water Treatment Solutions</title>
+  <meta name="description" content="Good Nature Enterprises provides STP Plant, ETP Plant, RO Plant, swimming pool filtration, panel automation and water treatment solutions in Jaipur, Rajasthan and India.">
 
   <style>
+    * { box-sizing: border-box; }
+
     body {
       margin: 0;
-      font-family: Arial;
-      background: #f4f9f6;
+      font-family: Arial, sans-serif;
+      background: #f5faf7;
+      color: #1f2933;
+      line-height: 1.6;
     }
 
     header {
       background: #0f5132;
       color: white;
-      padding: 20px;
+      padding: 18px 30px;
       text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 34px;
+    }
+
+    nav {
+      margin-top: 10px;
     }
 
     nav a {
       color: white;
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
       font-weight: bold;
     }
 
     .hero {
-      padding: 80px 20px;
+      min-height: 430px;
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("images/stp-plant.jpg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      background: #e6f4ea;
+      padding: 40px 20px;
+    }
+
+    .hero h2 {
+      font-size: 44px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      max-width: 850px;
+      margin: auto;
     }
 
     section {
-      padding: 40px 20px;
-      max-width: 1000px;
+      max-width: 1150px;
       margin: auto;
+      padding: 55px 20px;
     }
 
     h2 {
       color: #0f5132;
       text-align: center;
+      font-size: 32px;
+      margin-bottom: 30px;
     }
 
-    .services {
+    .about {
+      background: white;
+      padding: 30px;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+    }
+
+    .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
     }
 
     .card {
       background: white;
-      padding: 20px;
-      border-radius: 10px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.10);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
+    .card img {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 22px;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .card-content h3 {
+      color: #0f5132;
+      margin-top: 0;
+    }
+
+    .contact {
+      background: #e6f4ea;
+      border-radius: 16px;
+      text-align: center;
+      padding: 40px 20px;
     }
 
     footer {
       background: #0f5132;
       color: white;
       text-align: center;
-      padding: 15px;
+      padding: 18px;
+    }
+
+    @media (max-width: 600px) {
+      header h1 { font-size: 25px; }
+      .hero h2 { font-size: 31px; }
+      nav a { display: block; margin: 8px 0; }
     }
   </style>
 </head>
@@ -71,55 +146,118 @@
 <header>
   <h1>Good Nature Enterprises</h1>
   <nav>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
-<div class="hero">
-  <h2>Water Treatment Solutions</h2>
-  <p>STP Plant | ETP Plant | RO Plant | Wastewater Solutions</p>
+<div class="hero" id="home">
+  <div>
+    <h2>Water Treatment Solutions for a Better Tomorrow</h2>
+    <p>STP Plant, ETP Plant, RO Plant, filtration systems, swimming pool filtration and wastewater treatment solutions across Jaipur, Rajasthan and India.</p>
+  </div>
 </div>
 
-<section>
-  <h2>Our Services</h2>
-  <div class="services">
-
-    <div class="card">
-      <h3>STP Plant in Jaipur</h3>
-      <p>Sewage treatment plants using advanced technology.</p>
-    </div>
-
-    <div class="card">
-      <h3>ETP Plant in Rajasthan</h3>
-      <p>Industrial wastewater treatment solutions.</p>
-    </div>
-
-    <div class="card">
-      <h3>Water Treatment Company in India</h3>
-      <p>Complete water and wastewater solutions.</p>
-    </div>
-
+<section id="about">
+  <h2>About Us</h2>
+  <div class="about">
+    <p>
+      Good Nature Enterprises is a trusted water treatment company providing reliable solutions for sewage treatment, effluent treatment, RO plant, filtration systems, automation panels and wastewater recycling. We serve residential, commercial, institutional and industrial clients with a focus on quality, compliance and long-term performance.
+    </p>
   </div>
 </section>
 
-<section>
-  <h2>About Us</h2>
-  <p>
-    Good Nature Enterprises provides reliable and efficient water treatment solutions
-    across residential, commercial, and industrial sectors.
-  </p>
+<section id="services">
+  <h2>Our Services</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/stp-plant.jpg" alt="STP plant in Jaipur">
+      <div class="card-content">
+        <h3>STP Plant in Jaipur</h3>
+        <p>Advanced sewage treatment plant solutions for residential, commercial and institutional projects.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/blower.jpg" alt="STP blower and pump system">
+      <div class="card-content">
+        <h3>STP Maintenance</h3>
+        <p>Operation, maintenance and servicing of STP equipment, blowers, pumps and pipelines.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/panel-automation.jpg" alt="Water treatment control panel automation">
+      <div class="card-content">
+        <h3>Panel Automation</h3>
+        <p>Automation panels for water treatment plants, pumps, filtration systems and industrial processes.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/swimming-pool.jpg" alt="Swimming pool filtration system">
+      <div class="card-content">
+        <h3>Swimming Pool Filtration</h3>
+        <p>Swimming pool water filtration, treatment and maintenance solutions.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/acf-mgf-tank.jpg" alt="ACF MGF tank supply">
+      <div class="card-content">
+        <h3>ACF & MGF Tanks</h3>
+        <p>Activated carbon filter and multi-grade filter tank supply for water treatment systems.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/fabrication-work.jpg" alt="Tank fabrication work">
+      <div class="card-content">
+        <h3>Fabrication Work</h3>
+        <p>Custom tank fabrication and installation support for water treatment projects.</p>
+      </div>
+    </div>
+  </div>
 </section>
 
-<section>
-  <h2>Contact</h2>
-  <p>Email: info@goodnatureindia.com</p>
-  <p>Phone: +91-XXXXXXXXXX</p>
+<section id="projects">
+  <h2>Project Gallery</h2>
+
+  <div class="grid">
+    <div class="card">
+      <img src="images/stp-construction.jpg" alt="STP construction project">
+      <div class="card-content">
+        <h3>STP Construction</h3>
+        <p>On-site civil construction and installation work for treatment plants.</p>
+      </div>
+    </div>
+
+    <div class="card">
+      <img src="images/site-visit.jpg" alt="Engineering students site visit">
+      <div class="card-content">
+        <h3>Site Visit & Training</h3>
+        <p>Practical exposure and technical visits for engineering students and professionals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Good Nature Enterprises</strong></p>
+    <p>For STP, ETP, RO Plant, filtration and water treatment solutions.</p>
+    <p>Email: info@goodnatureindia.com</p>
+    <p>Website: goodnatureindia.com</p>
+  </div>
 </section>
 
 <footer>
-  <p>© 2026 Good Nature Enterprises</p>
+  <p>© 2026 Good Nature Enterprises. All Rights Reserved.</p>
 </footer>
 
 </body>
